@@ -48,7 +48,7 @@ typedef enum { eVersionError = -1, eProbenExhausted = 0, eProbenNormal = 1 } ePr
 class DFRobot_OxygenSensor {
 public:
   DFRobot_OxygenSensor(TwoWire *pWire = &Wire);
-  ~DFRobot_OxygenSe nsor();
+  ~DFRobot_OxygenSensor();
   /**
    * @fn begin
    * @brief Initialize i2c
