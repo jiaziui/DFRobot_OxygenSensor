@@ -119,7 +119,7 @@ jobs:
 
           for file in $FILES; do
             echo "Processing $file"
-            clang-tidy "$file" -p ./.github/config/ \
+            clang-tidy "$file" -p .github/config/ \
               -header-filter="$filter" \
               -config-file=./.github/config/.clang-tidy \
               --extra-arg="-I$PWD/src" \
