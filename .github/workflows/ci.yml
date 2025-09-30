@@ -100,8 +100,7 @@ jobs:
         run: pip install platformio
 
       - name: Generate compile_commands.json
-        run: pio run -t compiledb
-        #--project-dir ./.github/config/
+        run: pio run -t compiledb --project-dir ./.github/config/
 
       - name: Run clang-tidy
         run: |
