@@ -148,11 +148,11 @@ class DFRobot_Oxygen(object):
     rslt = self.read_reg(OXYGEN_DATA_REGISTER, 3)
     return float(rslt[0]) + float(rslt[1]) / 10.0 + float(rslt[2]) / 100.0
 
-  def get_average_num(self, barry, Len):
+  def get_average_num(self, barry, length):
     temp = 0.0
-    for num in range(0, Len):
+    for num in range(0, length):
       temp += barry[num]
-    return temp / float(Len)
+    return temp / float(length)
 
 
 class DFRobot_Oxygen_IIC(DFRobot_Oxygen):
@@ -163,10 +163,10 @@ class DFRobot_Oxygen_IIC(DFRobot_Oxygen):
   def write_reg(self, reg, data):
     self.i2cbus.write_i2c_block_data(self.__addr, reg, data)
 
-  def read_reg(self, reg, len):
+  def read_reg(self, reg, length):
     while 1:
       try:
-        rslt = self.i2cbus.read_i2c_block_data(self.__addr, reg, len)
+        rslt = self.i2cbus.read_i2c_block_data(self.__addr, reg, length)
         return rslt
       except:
         os.system("i2cdetect -y 1")

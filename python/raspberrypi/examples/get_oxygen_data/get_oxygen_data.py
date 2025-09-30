@@ -15,7 +15,6 @@ date  2021-10-22
 
 import sys
 import time
-import math
 
 sys.path.append("../..")
 from DFRobot_Oxygen import *
@@ -37,7 +36,8 @@ oxygen = DFRobot_Oxygen_IIC(IIC_MODE, ADDRESS_3)
 
 def loop():
   oxygen_data = oxygen.get_oxygen_data(COLLECT_NUMBER)
-  print("oxygen concentration is %4.2f %%vol" % oxygen_data)
+  # print("oxygen concentration is %4.2f %%vol" % oxygen_data)
+  print(f"oxygen concentration is {oxygen_data:.2f} %vol")
   time.sleep(1)
 
 

@@ -16,7 +16,6 @@ date  2021-10-22
 
 import sys
 import time
-import math
 
 sys.path.append("../..")
 from DFRobot_Oxygen import *
