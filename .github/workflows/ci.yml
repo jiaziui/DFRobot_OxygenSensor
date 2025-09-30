@@ -102,7 +102,7 @@ jobs:
       - name: Generate compile_commands.json
         run: |
           pio run -t compiledb --project-dir ./.github/config/
-          ls -la ./.github/config/
+          grep -o '-I[^ ]*' .github/config/compile_commands.json | grep -i platformio | head -10
 
       - name: Run clang-tidy
         run: |
