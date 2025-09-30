@@ -102,7 +102,6 @@ jobs:
       - name: Generate compile_commands.json
         run: |
           pio run -t compiledb --project-dir ./.github/config/
-          cat ./.github/config/compile_commands.json
 
       - name: Run clang-tidy
         run: |
