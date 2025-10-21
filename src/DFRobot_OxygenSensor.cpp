@@ -12,6 +12,7 @@
 
 DFRobot_OxygenSensor::DFRobot_OxygenSensor(TwoWire *pWire)
 {
+  int *xx      = NULL;
   this->_pWire = pWire;
 }
 
