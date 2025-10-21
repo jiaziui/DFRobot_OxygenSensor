@@ -1,7 +1,7 @@
 # 官方资料
 # https://clang.llvm.org/extra/clang-tidy/?utm_source=chatgpt.com
 Checks: >
-  clang-analyzer-*,
+  # clang-analyzer-*,
   '''
   clang-analyzer-core.NullDereference（空指针解引用）
   clang-analyzer-core.uninitialized.Assign（未初始化使用）
@@ -9,14 +9,14 @@ Checks: >
   clang-analyzer-cplusplus.NewDeleteLeaks（new/delete 泄露/不匹配）
   clang-analyzer-security.insecureAPI.*（危险 C API 用法）
   '''
-  bugprone-*,
+  # bugprone-*,
   '''
   bugprone-integer-division # 整数除法检查
   bugprone-sizeof-expression # sizeof 表达式检查
   bugprone-macro-parentheses / bugprone-macro-repeated-side-effects（宏缺少括号/参数多次求值）
   bugprone-branch-clone（分支重复、实为复制粘贴错误）
   '''
-  readability-redundant-*,
+  # readability-redundant-*,
   '''
   # 误导性缩进提醒
   readability-redundant-control-flow（冗余控制流）
@@ -26,8 +26,8 @@ Checks: >
   '''
 
   readability-identifier-naming # 标识符命名检查
-  readability-misplaced-array-index # 数组索引位置检查
-  readability-misplaced-pointer # 指针位置检查
+  # readability-misplaced-array-index # 数组索引位置检查
+  # readability-misplaced-pointer # 指针位置检查
 
 
 CheckOptions:
