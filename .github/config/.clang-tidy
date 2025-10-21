@@ -1,8 +1,8 @@
 # 官方资料
 # https://clang.llvm.org/extra/clang-tidy/?utm_source=chatgpt.com
-Checks: >
-  readability-identifier-naming
-  clang-analyzer-*,
+Checks: >-
+  readability-identifier-naming,
+  clang-analyzer-*
 
 CheckOptions:
   # 类命名
