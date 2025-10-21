@@ -3,6 +3,11 @@
 Checks: >-
   readability-identifier-naming,
   clang-analyzer-*
+  bugprone-*,
+  readability-redundant-*,
+  readability-identifier-naming,
+  readability-misplaced-array-index,
+  readability-misplaced-pointer
 
 CheckOptions:
   # 类命名
