@@ -1,7 +1,7 @@
 ---
 name: Arduino Library CI
 
-on:
+on: 
   push:
     branches:
       - "**"       # 普通分支推送时运行代码检查
@@ -123,10 +123,10 @@ jobs:
         with:
           python-version: ${{ env.PYTHON_3 }}
           cache-key: ${{ needs.common.outputs.cache-key }}
-
+        
 
       - name: Install PlatformIO
-        run: |
+        run: | 
           pip install platformio
           cp ./.github/config/platformio.ini .
 
@@ -139,7 +139,7 @@ jobs:
           -path './.git'    -prune -o \
           -path './.github' -prune -o \
           -type f \( -name '*.cpp' -o -name '*.h' -o -name '*.ino' \) -print)
-
+          
           echo "Running clang-tidy on $FILES"
           if [ -z "$FILES" ]; then             # 检查是否有文件
               echo "No source files found."
@@ -227,3 +227,4 @@ jobs:
           echo "clang-tidy: ${{ needs['clang-tidy'].result }}"
           echo "release:    ${{ needs.release.result }}"
           echo "===================="
+
