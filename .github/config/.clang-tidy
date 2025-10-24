@@ -10,7 +10,7 @@ Checks: >-
 
 CheckOptions:
   # 类命名
-  readability-identifier-naming.ClassCase: 'UPPER_CASE,CamelCase'
+  readability-identifier-naming.ClassCase: 'aNy_CasE'
   readability-identifier-naming.ClassPrefix: 'DFRobot_'
 
   readability-identifier-naming.MemberCase: 'camelBack'
